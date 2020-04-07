@@ -668,6 +668,13 @@ a {
 #header .header-nav .social a.douban:hover {
   border: 1px solid #06c611;
 }
+#header .header-nav .social a.csdn {
+  background: url("/images/csdn.ico") center no-repeat #fff;
+  border: 1px solid #aaf;
+}
+#header .header-nav .social a.csdn:hover {
+  border: 1px solid #aaf;
+}
 #header .header-nav .social a.mail {
   background: url("/img/mail.png") center no-repeat #005a87;
   border: 1px solid #005a87;
