@@ -119,7 +119,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						
+						<a href="/tags/%E6%9D%8E%E8%88%AA%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">李航统计学习</a> <a href="/tags/%E8%B4%9D%E5%8F%B6%E6%96%AF/" style="font-size: 10px;">贝叶斯</a>
 					</div>
 				</section>
 				
@@ -148,7 +148,7 @@
 				
 				<section class="switch-part switch-part4">
 				
-					<div id="js-aboutme">虽然还没想好怎么夸自己，但总觉得这里放点东西比较和谐。。。</div>
+					<div id="js-aboutme">虽然还没想好怎么夸自己，但总觉得这里放点东西比较和谐</div>
 				</section>
 				
 				
@@ -204,10 +204,10 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-朴素贝叶斯" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-统计学习方法之朴素贝叶斯" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2020/03/14/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF/" class="article-date">
+      <a href="/2020/03/14/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E4%B9%8B%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF/" class="article-date">
   	<time datetime="2020-03-14T01:41:30.666Z" itemprop="datePublished">2020-03-14</time>
 </a>
     </div>
@@ -221,8 +221,8 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/14/%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF/" target="_blank">
-      朴素贝叶斯
+      <a class="article-title" href="/2020/03/14/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E4%B9%8B%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF/" target="_blank">
+      统计学习方法之朴素贝叶斯
       </a>
     </h1>
   
@@ -232,52 +232,26 @@
     
     <div class="article-entry" itemprop="articleBody">	
       
-	  
-		
-		
-        <h1 id="统计学习之朴素贝叶斯"><a href="#统计学习之朴素贝叶斯" class="headerlink" title="统计学习之朴素贝叶斯"></a>统计学习之朴素贝叶斯</h1><p>联合概率 P(A,B) = P(B|A)<em>P(A) = P(A|B)</em>P(B)将右边两个式子联合得到下面的式子：</p>
-<p>P(A|B)表示在B发生的情况下A发生的概率。P(A|B) = [P(B|A)*P(A)] / P(B)</p>
-<p>直观理解一下这个式子，如下图，问题A在我们知道B信息之后概率发生了变化</p>
-<p><img src="images/%E8%B4%9D%E5%8F%B6%E6%96%AF1.png" alt="贝叶斯"></p>
-<h2 id="1-后验概率推导"><a href="#1-后验概率推导" class="headerlink" title="1.后验概率推导"></a>1.后验概率推导</h2><p><img src="images/%E8%B4%9D%E5%8F%B6%E6%96%AF2.png" alt="贝"></p>
-<p>​        朴素贝叶斯条件：向量X的每一个特征项是独立同分布，这个条件过于宽泛，但是为了计算简便，我们尝试使用一下，用了之后发现效果还不错，那就用着吧</p>
-<h2 id="2-极大似然估计求取分类器y值"><a href="#2-极大似然估计求取分类器y值" class="headerlink" title="2.极大似然估计求取分类器y值"></a>2.极大似然估计求取分类器y值</h2><p><img src="images/%E8%B4%9D%E5%8F%B6%E6%96%AF3.png" alt=""></p>
-<p>​        还记得原先求不同类别下的最大概率这一式子吗（分类器y）？里面有很多的连乘记得吗？</p>
-<p>​        这里提出了一个问题，那么多概率连乘，如果其中有一个概率为0怎么办？那整个式子直接就是0了，这样不对。所以我们连乘中的每一项都得想办法让它保证不是0，哪怕它原先是0,（如果原先是0，表示在所有连乘项中它概率最小，那么转换完以后只要仍然保证它的值最小，对于结果的大小来说没有影响）这里就使用到了贝叶斯估计。</p>
-<p><img src="images/%E8%B4%9D%E5%8F%B6%E6%96%AF4.png" alt=""></p>
-<p>​        做这种变换是为了每一个概率不为0，从而对于y这个连乘的式子没有影响，但是为了保持概率值之和依旧为1，才演变成上面的式子</p>
-<h2 id="3-例题理解"><a href="#3-例题理解" class="headerlink" title="3.例题理解"></a>3.例题理解</h2><h3 id="3-1朴素贝叶斯"><a href="#3-1朴素贝叶斯" class="headerlink" title="3.1朴素贝叶斯"></a>3.1朴素贝叶斯</h3><p><img src="images/%E8%B4%9D%E5%8F%B6%E6%96%AF5.png" alt=""></p>
-<p><img src="images/%E8%B4%9D%E5%8F%B6%E6%96%AF6.png" alt=""></p>
-<h3 id="3-2贝叶斯估计"><a href="#3-2贝叶斯估计" class="headerlink" title="3.2贝叶斯估计"></a>3.2贝叶斯估计</h3><p><img src="images/%E8%B4%9D%E5%8F%B6%E6%96%AF7.png" alt=""></p>
-<h2 id="4-补充"><a href="#4-补充" class="headerlink" title="4.补充"></a>4.补充</h2><p>​        在实际运用中，不光需要使用贝叶斯估计（保证概率不为0），同时也要取对数（保证连乘结果不下溢出）。</p>
-<p><strong>为什么?</strong></p>
-<p>​        由于连乘项都是0-1之间的，那很多个（特征个数）0-1之间的数相乘，最后的数一定是非常非常小了，可能无限接近于0。对于程序而言过于接近0的数<strong>可能会造成下溢出</strong>，也就是精度不够表达了。所以我们会给整个连乘项取对数，这样哪怕所有连乘最后结果无限接近0，那取完log以后数也会变得很大（虽然是负的很大），计算机就可以表示了。</p>
-<p><strong>取完log以后结果会不会发生变化?</strong></p>
-<p>​        答案是不会的。log在定义域内是递增函数，log(x)中的x也是递增函数。在单调性相同的情况下，连乘得到的结果大，log取完也同样大，并不影响不同的连乘结果的大小的比较</p>
-<h2 id="5-代码复现-jupyter"><a href="#5-代码复现-jupyter" class="headerlink" title="5.代码复现(jupyter)"></a>5.代码复现(jupyter)</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#下载minist手写数据集,并加载</span></span><br><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line">mnist = tf.keras.datasets.mnist</span><br><span class="line">(X_train, y_train), (X_test, y_test) = mnist.load_data()</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#X_train.shape is (60000, 28, 28)</span></span><br><span class="line"><span class="comment">#y_train.shape is (60000,)</span></span><br><span class="line"><span class="comment">#我们将数据展开一下</span></span><br><span class="line">X_train = X_train.reshape(<span class="number">-1</span> , <span class="number">28</span>*<span class="number">28</span>)</span><br><span class="line">y_train = y_train.reshape(<span class="number">-1</span> , <span class="number">1</span>)</span><br><span class="line">X_test = X_test.reshape(<span class="number">-1</span> , <span class="number">28</span>*<span class="number">28</span>)</span><br><span class="line">y_test = y_test.reshape(<span class="number">-1</span> , <span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#为了简便，我们将手写数据图片二值化一下</span></span><br><span class="line">X_train[X_train &lt;  <span class="number">128</span>] = <span class="number">0</span></span><br><span class="line">X_train[X_train &gt;= <span class="number">128</span>] = <span class="number">1</span></span><br><span class="line">X_test[X_test &lt;  <span class="number">128</span>] = <span class="number">0</span></span><br><span class="line">X_test[X_test &gt;= <span class="number">128</span>] = <span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="comment">#根据公式计算先验概率P_y，利用拉普拉斯平滑λ=1，并对连乘公式取log</span></span><br><span class="line">P_y = np.zeros((<span class="number">10</span> , <span class="number">1</span>))</span><br><span class="line">classes = <span class="number">10</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(classes):</span><br><span class="line">    P_y[i] = ((np.sum(y_train == i))+<span class="number">1</span>)/(len(y_train)+classes)</span><br><span class="line">P_y = np.log(P_y)</span><br><span class="line">print(P_y)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#计算条件概率Px_y</span></span><br><span class="line"><span class="comment">#这个模块实现求取各个特征值的个数</span></span><br><span class="line">Px_y = np.zeros((classes , X_train.shape[<span class="number">1</span>] , <span class="number">2</span>))</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(X_train.shape[<span class="number">0</span>]):</span><br><span class="line">    k = y_train[i]</span><br><span class="line">    x = X_train[i]</span><br><span class="line">    <span class="keyword">for</span> feature <span class="keyword">in</span> range(X_train.shape[<span class="number">1</span>]):</span><br><span class="line">        Px_y[k,feature,x[f]] += <span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#开始计算条件概率Px_y</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="keyword">for</span> index <span class="keyword">in</span> range(classes):</span><br><span class="line">    <span class="keyword">for</span> f <span class="keyword">in</span> range(X_train.shape[<span class="number">1</span>]):</span><br><span class="line">        Px_y[index , f , <span class="number">0</span>] = (Px_y[index , f , <span class="number">0</span>] + <span class="number">1</span>) / (np.sum(y_train == index) + <span class="number">2</span>)</span><br><span class="line">        Px_y[index , f , <span class="number">1</span>] = (Px_y[index , f , <span class="number">1</span>] + <span class="number">1</span>) / (np.sum(y_train == index) + <span class="number">2</span>)</span><br><span class="line"><span class="comment">#为了把连乘变成连加，我们对Px_y取一个log对数</span></span><br><span class="line">Px_y = np.log(Px_y)</span><br><span class="line"><span class="comment">#拿一个出来看看</span></span><br><span class="line">print(Px_y[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#我们预测的最终结果放在predict中</span></span><br><span class="line"><span class="comment">#每一个数据在10个分类器的结果放在res中，取一个argmax就得到一个预测值</span></span><br><span class="line">predict = np.zeros((y_test.shape[<span class="number">0</span>],<span class="number">1</span>))</span><br><span class="line"><span class="keyword">for</span> data <span class="keyword">in</span> range(y_test.shape[<span class="number">0</span>]):</span><br><span class="line">    res = np.zeros((classes , <span class="number">1</span>))</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(classes):</span><br><span class="line">        res[i] = P_y[i]</span><br><span class="line">        <span class="keyword">for</span> f <span class="keyword">in</span> range(X_train.shape[<span class="number">1</span>]):</span><br><span class="line">            res[i] += Px_y[i,f,X_test[data,f]]</span><br><span class="line">    predict[data] = np.argmax(res)</span><br><span class="line">predict = predict.astype(int)</span><br><span class="line"><span class="comment">#取两个拿出来对比一下</span></span><br><span class="line">print(predict[:<span class="number">5</span>])</span><br><span class="line">print(y_test[:<span class="number">5</span>])</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#预测一下准确率</span></span><br><span class="line">precision = np.sum(predict == y_test) / y_test.shape[<span class="number">0</span>]</span><br><span class="line">print(precision)</span><br></pre></td></tr></table></figure>
-
-
+        <p>简介：为了计算方便，朴素贝叶斯是在贝叶斯公式的基础上提出了条件性假设，在机器学习方法中，朴素贝叶斯有着较高的准确率，本文将尽可能使用通俗易懂的文字领悟这一经典算法</p>
       
     </div>
     
     <div class="article-info article-info-index">
       
-      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9D%8E%E8%88%AA%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0/" rel="tag">李航统计学习</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%B4%9D%E5%8F%B6%E6%96%AF/" rel="tag">贝叶斯</a></li></ul>
+	</div>
 
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2020/03/14/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E4%B9%8B%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
