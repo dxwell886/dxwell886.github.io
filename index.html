@@ -205,77 +205,6 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2020/04/07/hello-world/" class="article-date">
-  	<time datetime="2020-04-07T09:39:36.619Z" itemprop="datePublished">2020-04-07</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/07/hello-world/" target="_blank">
-      Hello World
-      </a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">	
-      
-	  
-		
-		
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
     <article id="post-朴素贝叶斯" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -310,19 +239,17 @@
         <h1 id="统计学习之朴素贝叶斯"><a href="#统计学习之朴素贝叶斯" class="headerlink" title="统计学习之朴素贝叶斯"></a>统计学习之朴素贝叶斯</h1><p>联合概率 P(A,B) = P(B|A)<em>P(A) = P(A|B)</em>P(B)将右边两个式子联合得到下面的式子：</p>
 <p>P(A|B)表示在B发生的情况下A发生的概率。P(A|B) = [P(B|A)*P(A)] / P(B)</p>
 <p>直观理解一下这个式子，如下图，问题A在我们知道B信息之后概率发生了变化</p>
-<img src="/Users/mac/Library/Application Support/typora-user-images/image-20200315110224563.png" alt="image-20200315110224563" style="zoom: 25%;" />
-
-<h2 id="1-后验概率推导"><a href="#1-后验概率推导" class="headerlink" title="1.后验概率推导"></a>1.后验概率推导</h2><p><img src="/Users/mac/Pictures/%E7%85%A7%E7%89%87%E5%9B%BE%E5%BA%93.photoslibrary/resources/derivatives/3/3415950B-C792-47B7-8905-A179752D40F7_1_105_c.jpeg" alt="3415950B-C792-47B7-8905-A179752D40F7_1_105_c"></p>
+<p><img src="images/%E8%B4%9D%E5%8F%B6%E6%96%AF1.png" alt="贝叶斯"></p>
+<h2 id="1-后验概率推导"><a href="#1-后验概率推导" class="headerlink" title="1.后验概率推导"></a>1.后验概率推导</h2><p><img src="images/%E8%B4%9D%E5%8F%B6%E6%96%AF2.png" alt="贝"></p>
 <p>​        朴素贝叶斯条件：向量X的每一个特征项是独立同分布，这个条件过于宽泛，但是为了计算简便，我们尝试使用一下，用了之后发现效果还不错，那就用着吧</p>
-<h2 id="2-极大似然估计求取分类器y值"><a href="#2-极大似然估计求取分类器y值" class="headerlink" title="2.极大似然估计求取分类器y值"></a>2.极大似然估计求取分类器y值</h2><p>![image-20200315122839522](/Users/mac/Library/Application Support/typora-user-images/image-20200315122839522.png)</p>
+<h2 id="2-极大似然估计求取分类器y值"><a href="#2-极大似然估计求取分类器y值" class="headerlink" title="2.极大似然估计求取分类器y值"></a>2.极大似然估计求取分类器y值</h2><p><img src="images/%E8%B4%9D%E5%8F%B6%E6%96%AF3.png" alt=""></p>
 <p>​        还记得原先求不同类别下的最大概率这一式子吗（分类器y）？里面有很多的连乘记得吗？</p>
 <p>​        这里提出了一个问题，那么多概率连乘，如果其中有一个概率为0怎么办？那整个式子直接就是0了，这样不对。所以我们连乘中的每一项都得想办法让它保证不是0，哪怕它原先是0,（如果原先是0，表示在所有连乘项中它概率最小，那么转换完以后只要仍然保证它的值最小，对于结果的大小来说没有影响）这里就使用到了贝叶斯估计。</p>
-<p>![image-20200315150331113](/Users/mac/Library/Application Support/typora-user-images/image-20200315150331113.png)</p>
+<p><img src="images/%E8%B4%9D%E5%8F%B6%E6%96%AF4.png" alt=""></p>
 <p>​        做这种变换是为了每一个概率不为0，从而对于y这个连乘的式子没有影响，但是为了保持概率值之和依旧为1，才演变成上面的式子</p>
-<h2 id="3-例题理解"><a href="#3-例题理解" class="headerlink" title="3.例题理解"></a>3.例题理解</h2><h3 id="3-1朴素贝叶斯"><a href="#3-1朴素贝叶斯" class="headerlink" title="3.1朴素贝叶斯"></a>3.1朴素贝叶斯</h3><p>![image-20200315123030046](/Users/mac/Library/Application Support/typora-user-images/image-20200315123030046.png)</p>
-<p>![image-20200315123130543](/Users/mac/Library/Application Support/typora-user-images/image-20200315123130543.png)</p>
-<h3 id="3-2贝叶斯估计"><a href="#3-2贝叶斯估计" class="headerlink" title="3.2贝叶斯估计"></a>3.2贝叶斯估计</h3><p>![image-20200315135333836](/Users/mac/Library/Application Support/typora-user-images/image-20200315135333836.png)</p>
-<p>![image-20200315135412184](/Users/mac/Library/Application Support/typora-user-images/image-20200315135412184.png)</p>
+<h2 id="3-例题理解"><a href="#3-例题理解" class="headerlink" title="3.例题理解"></a>3.例题理解</h2><h3 id="3-1朴素贝叶斯"><a href="#3-1朴素贝叶斯" class="headerlink" title="3.1朴素贝叶斯"></a>3.1朴素贝叶斯</h3><p><img src="images/%E8%B4%9D%E5%8F%B6%E6%96%AF5.png" alt=""></p>
+<p><img src="images/%E8%B4%9D%E5%8F%B6%E6%96%AF6.png" alt=""></p>
+<h3 id="3-2贝叶斯估计"><a href="#3-2贝叶斯估计" class="headerlink" title="3.2贝叶斯估计"></a>3.2贝叶斯估计</h3><p><img src="images/%E8%B4%9D%E5%8F%B6%E6%96%AF7.png" alt=""></p>
 <h2 id="4-补充"><a href="#4-补充" class="headerlink" title="4.补充"></a>4.补充</h2><p>​        在实际运用中，不光需要使用贝叶斯估计（保证概率不为0），同时也要取对数（保证连乘结果不下溢出）。</p>
 <p><strong>为什么?</strong></p>
 <p>​        由于连乘项都是0-1之间的，那很多个（特征个数）0-1之间的数相乘，最后的数一定是非常非常小了，可能无限接近于0。对于程序而言过于接近0的数<strong>可能会造成下溢出</strong>，也就是精度不够表达了。所以我们会给整个连乘项取对数，这样哪怕所有连乘最后结果无限接近0，那取完log以后数也会变得很大（虽然是负的很大），计算机就可以表示了。</p>
