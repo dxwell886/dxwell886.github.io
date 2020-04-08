@@ -93,7 +93,7 @@ fetch('https://v1.hitokoto.cn')
 .then(function (data) {
   if (subtitleEffect){
     var from = '出自 ' + data.from
-    var sub = ''.length == 0  ? new Array() : ''.split(",");
+    var sub = '今天也要加油！'.length == 0  ? new Array() : '今天也要加油！'.split(",");
     var both = sub.unshift(data.hitokoto,from)  
     var typed = new Typed("#subtitle", {
       strings: sub,
